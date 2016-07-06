@@ -11,3 +11,9 @@ if __name__ == "__main__":
 	array = [3,6,1,7,8,90]
 	total = 93
 	print Solution().two_sum(array, total)
+
+'''
+use hashtable
+Time: O(n)
+Space: O(n)
+'''
