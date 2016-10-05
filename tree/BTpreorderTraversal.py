@@ -29,3 +29,19 @@ class Solution(object):
 					stack.append((cur.left, False))
 					stack.append((cur, True))
 		return result
+
+'''
+another solution from clean code
+'''
+class Solution:
+	def preOrder(self, root, listt):
+		stack = []
+		while root or stack:
+			if root:
+				listt.append(root.val)
+				root = root.left
+				stack.append(root)
+			else:
+				root = stack.pop()
+				root = root.right
+		return listt

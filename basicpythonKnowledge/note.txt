@@ -1,0 +1,5 @@
+python generator similar alternatives:
+iteritems() vs items()
+xrange() vs range()
+benefits of using generator:
+

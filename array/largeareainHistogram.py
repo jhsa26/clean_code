@@ -4,8 +4,8 @@ class Solution:
     def largestRectangleArea(self, height):
         increasing, area, i = [], 0, 0
         while i <= len(height):
-            import pdb; 
-            pdb.set_trace()
+            #import pdb; 
+            #pdb.set_trace()
             if not increasing or (i < len(height) and height[i] > height[increasing[-1]]):
                 increasing.append(i)
                 i += 1

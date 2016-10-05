@@ -1,3 +1,12 @@
+'''
+bit operations in python:
+x << y: which is equivalent to x * (2 ** y)
+x >> y: is x / (2 ** y)
+x & y: bitwise and
+x | y: bitwise or
+~ x: complement of x which is the same as - x - 1
+x ^ y : exlusive or
+'''
 class Solution:
 	def findSingle(self, res):
 		num = 0
