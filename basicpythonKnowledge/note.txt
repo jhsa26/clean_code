@@ -3,3 +3,4 @@ iteritems() vs items()
 xrange() vs range()
 benefits of using generator:
 
+still not sure what's the difference betweem list and list[:] inside the combination problem
