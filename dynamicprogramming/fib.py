@@ -49,6 +49,11 @@ def fib(n):
 		res[n] = fib(n - 1) + fib(n - 2)
 		return res[n]
 
+'''
+Recursion is just a function calling itself, it's not related to dynamic programming, like recursion vs iteration.
+Coming to dynamic programming, most DP problems can be solved by top-down recursion or bottoms up approach (iterative) caching intermediate results a technique which is called 'memorization'
+One major difference using these two methods to solve a problem is that in 'recursive' top down approach, you need not calculate all the sub-problems, but the bottoms-up approach you calculate all the sub-problems whether they are used in the final solution or not.
+'''
 
 
 

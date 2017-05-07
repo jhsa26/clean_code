@@ -3,4 +3,26 @@ iteritems() vs items()
 xrange() vs range()
 benefits of using generator:
 
-still not sure what's the difference betweem list and list[:] inside the combination problem
+a = [1, 2, 3]
+b = a  # b is a reference on a, same object
+b = a[:] # b is a swallow copy of a
+b = list(a) # b is a swallow copy of a
+import copy
+b = copy.deepcopy(a) # b is a deep copy of a
+
+a = [1, 2, 3]
+a.insert(2, 4) # only update but no output
+a[:2] + [4] + a[2:] # does not update the original array but make the output
+similarly
+b = [1, 2]
+a.append(b) # append the [1, 2] to [1, 2, 3, [1, 2]]
+a + b # does not update but output [1, 2, 3, 1, 2]
+a = a + b # does not output but update a to [1, 2, 3, 1, 2]
+
+bit manipulation:
+a ^ b: xor
+a | b: or
+a & b: and 
+~ a: negate
+a << 1 or a >> 1
+
