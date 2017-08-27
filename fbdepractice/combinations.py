@@ -28,12 +28,12 @@ class Solution:
         self.dfs(n, result, 0, [], k)
         return result
     def dfs(self, n, result, start, temp, k):
-        if k == 0:
+        if k == len(temp):
             result.append(temp) # when using  temp.append, temp.add() way to do backtracking, we have to pass a copy like [:], but when directly pass the list into the recursive function, we do not have to
             return
         for i in range(start, n):
            # temp.append(i + 1)
-            self.dfs(n, result, i + 1, temp + [i + 1], k - 1)
+            self.dfs(n, result, i + 1, temp + [i + 1], k)
            # temp.pop()
 
 if __name__ == "__main__":

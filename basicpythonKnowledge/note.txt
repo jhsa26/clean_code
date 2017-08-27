@@ -26,5 +26,43 @@ a & b: and
 ~ a: negate
 a << 1 or a >> 1
 
+from collections import deque
+from collections import Counter
+
+pay attention to python's pass by value/reference:
+def temp(lis):
+    lis.append(1)
+    return lis
+
+ans = [1, 2]
+temp(ans)
+ans
+
+def temp(lis):
+    lis = lis + [1]
+    return lis
+
+ans = [1, 2]
+temp(ans)
+ans
+
+random.random
+random.randint
+random.choice
+random.shuffle
+random.uniform
+
+collections.defaultdict
+collections.deque
+collections.counter
+
+mysql allows:
+group by with alias in select clause
+select the column which is unique for each group by group by clause
+which is not well supported by Oracle or sql server
+
+
+
+
 
 

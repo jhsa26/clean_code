@@ -11,7 +11,6 @@ class Solution():
 		return F + 1 if List[F] < target else F
 
 
-
 if __name__ == "__main__":
 	inputList = [1,3,5,6]
 	print Solution().searchInsert(inputList, 5)

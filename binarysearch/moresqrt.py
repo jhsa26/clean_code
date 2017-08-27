@@ -13,6 +13,7 @@ is "left - 1"
 Time: log(n)
 Space: O(1)
 '''
+# This problem is a little tricky since we have to lower down the result, so we use the way "left <= right" and also left = mid + 1 with left - 1: one hand it can avoid the infinite loop, another hand is that it can lower back to the correct result
 # refined github version
 class Solution:
 	def mySqrt(self, x):
@@ -21,8 +22,8 @@ class Solution:
 		left = 1
 		right = x/2
 		while left <= right:
-			mid = left + (right - left) / 2
-			if mid > x / mid:
+			mid = left + (right - left) / 2 # care about overflow here so we use "left + (right - left) / 2" instead of (left + right) / 2
+			if mid > x / mid:    # we do not have to worry about float or not here
 				right = mid - 1
 			else:
 				left = mid + 1
@@ -53,14 +54,14 @@ if __name__ == "__main__":
 	print Solution().mySqrt(44)
 
 '''
-if the result may not be integer, then the normal way to 
+if the result may not be integer, then the normal way to
 calculate the sqrt is like below
 '''
 
 def sqrtBI(x, epsilon):
     assert x>0, 'X must be non-nagtive, not ' + str(x)
     assert epsilon > 0, 'epsilon must be postive, not ' + str(epsilon)
- 
+
     low = 0
     high = max(x, 1.0)
     ## high = x
