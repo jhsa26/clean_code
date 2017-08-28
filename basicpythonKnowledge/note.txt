@@ -61,8 +61,34 @@ group by with alias in select clause
 select the column which is unique for each group by group by clause
 which is not well supported by Oracle or sql server
 
+git clone/init to local (firstly the repository already forked from other github account into my personal account)
+then add a remote upstream as the original github account by tracking any changes:
+git remote add upstream <account>
+git fetch upstream <branch>
+git branch -va
+git checkout master
+git merge upstream/master
 
+do your own work by creating a new branch:
+git checkout master
+git branch newfeature
+git checkout newfeature
+.... do any editing or adding
 
+rebase process if applicable:
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+git checkout newfeature
+git rebase master
+
+to manage multiple github account within a certain computer:
+we can directly add a line in the ~/.gitconfig:
+[credential]
+useHttpPath = true
+then you will be prompted with the certain usename and password for different account every time you send pull or push
+for different ssh keys to be setup for different account, refer to the online tutorial also.
 
 
 
